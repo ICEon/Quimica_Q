@@ -1,78 +1,59 @@
-@charset "utf-8";
-/* CSS Document */
-.adivinar
- {
-	 width: 100%;
-	 top: 0;
-     left: 0;
-	 border-bottom-left-radius: 15px;
-	 border-bottom-right-radius: 15px;
+<?xml version="1.0" encoding="UTF-8"?>  
+ <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->  
+ <widget xmlns   = "http://www.w3.org/ns/widgets"  
+     xmlns:gap = "http://phonegap.com/ns/1.0"  
+     id    = "com.phonegap.QuimicaQuiz"  
+     version  = "2.0.0">  
+	 
+   <name> Quimica Quiz </name>  
+   
+   <description>  
+     Aprende los elementos
+   </description>  
+   
+   <author href="https://build.phonegap.com" email="micorreo@gmail.com">  
+       ICEon
+   </author>  
+   
+   <!-- Personaliza la aplicacion y plataforma  -->  
+  <preference name="phonegap-version" value="3.7.0" />
 
- }
-.boton
-{
-    display: inline-block;
-	font-size: 4rem;
-	margin: 0.1rem;
-	color: #FFF;	
-	border: 0.7rem solid #FFF;
-	text-align: center;
-	width: 22%;
-}
 
-#comandos
- {
-		  width: 100%;
-		  background-color: #30F;
- }
 
-#comandos div:first-child
- {
-	 background-color:#D92440;
- }
+
+   <preference name="orientation"        value="portrait" />    
+   <preference name="target-device"       value="universal" />   
+   <preference name="fullscreen"         value="true" />      
+   <preference name="android-installLocation"  value="auto" />  
+   <preference name="SplashScreen" value="splash"/>
+   <preference name="SplashScreenDelay" value="1000"/>
+
+   <!-- Plugins -->  
+   <!-- Core plugins -->  
+
+   <gap:plugin name="org.apache.cordova.splashscreen" />  
+   <gap:plugin name="org.apache.cordova.vibration" /> 
+
  
-#comandos div:nth-child(2)
- {
-	  background-color:#6DD921;
- }
- 
-#comandos div:nth-child(3)
- {
-	  background-color: #F87E26;
- }
 
-.carril
- {	 
+   <!-- Third party plugins -->  
+   <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.6" />
+   <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" version="1.0" />
 
-    display: inline-block;
-	overflow: hidden;	
-	margin: 0.1rem;
-	color: #FFF;	
-    border-right: 0.7rem solid #FFF; 
-	border-left: 0.7rem solid #FFF;
-	text-align: center;
-	width: 22%;
- }
- 
-$('#tablero')
- {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
- }
+   
+   <!-- Define los iconos de la aplicacion para cada plataforma -->  
+   <icon src="icon.png" />  
+   <icon src="res/icon/android/icon-36-ldpi.png"  gap:platform="android"  gap:qualifier="ldpi" />  
+   <icon src="res/icon/android/icon-48-mdpi.png"  gap:platform="android"  gap:qualifier="mdpi" />  
+   <icon src="res/icon/android/icon-72-hdpi.png"  gap:platform="android"  gap:qualifier="hdpi" />  
+   <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android"  gap:qualifier="xhdpi" />  
 
- #tablero span {
-	position:relative;
-	font-size:3em;
-	color:#6DD921;
-	/*border:1px #0F0 solid;*/
-    display: inline-block;
-    width: 80px;
-    height: 80px;
+   <!-- Define la pantalla de splash para cada plataforma -->  
+   <gap:splash src="splash.png" />
+   <gap:splash src="res/screen/android/screen-ldpi-portrait.png"    gap:platform="android" gap:qualifier="port-ldpi" />  
+   <gap:splash src="res/screen/android/screen-mdpi-portrait.png"    gap:platform="android" gap:qualifier="port-mdpi" />  
+   <gap:splash src="res/screen/android/screen-hdpi-portrait.png"    gap:platform="android" gap:qualifier="port-hdpi" />  
+   <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"   gap:platform="android" gap:qualifier="port-xhdpi" />  
 
- }
- 
-  .grande
- {display:block;
-  color:#E67E22;
- }
+   
+ </widget>  
